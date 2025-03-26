@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title> Perfil Simples </title>
+
+    <style>
+        body {
+            background-color: whitesmoke;
+            font-family: Trattatello;
+            text-align: center;
+        }
+
+        header {
+            display:-moz-box;
+            background-color: darkcyan;
+            color:white;
+            font-size: large;
+            margin-left: 25%;
+            margin-right: 25%;
+            margin-top:0;
+            padding: 10px;
+            margin-bottom: 2%;
+
+        }
+        section1{
+            color: darkcyan;
+            margin-bottom:5%;
+        }
+        img{
+            cursor:pointer;
+        }
+        #hobbies{
+            margin-bottom: 0;
+            color: darkcyan;
+
+        }
+
+        ol {  
+            color:darkcyan;
+            display: inline-block; 
+            padding: 0; 
+            list-style-position: inside;
+            margin-top: 0;
+        }
+
+        footer {
+            text-align: center;
+            background-color: darkcyan;
+            padding: 20px;;
+            margin-top: 5%;
+            color:white;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1><b> Dr.Epaminondas Alberto Santos</b></h1>
+    </header>
+    <section1>
+        <img src="https://cdn.pixabay.com/photo/2021/04/25/14/30/man-6206534_1280.jpg" alt="Dr.Epaminondas Alberto Santos" width="250" height="250" id="fotoPerfil">
+        <h3>Doutor Epamninodas é um médico patologista especialista na doença de Hodking. <br>Em seu tempo livre, gosta
+            de pescar e passar tempo com sua adoravel esposa Elsa, seus três filhos e dois gatos.</h3>
+    </section1>
+    <h3 id ="hobbies"><b>Hobbies:</b></h3>
+        <ol> 
+            <li>jogar dominó; </li>
+            <li>pescar &#129416;;</li>
+            <li>alimentar os pombos da praça;</li>
+            <li>ir ao clube aos domingos;</li>
+        </ol>
+    <footer>
+        <h3">Siga-nos nas redes sociais!</h3>
+        <br>
+        <a href="https://www.instagram.com/"> <img src="https://cdn.pixabay.com/photo/2016/08/01/21/00/icon-1562136_1280.png" alt="@epaminondas" width="30" height="30"></a>
+    </footer>
+    <script>  
+        window.onload = function() {  
+            document.getElementById('fotoPerfil').addEventListener('click', function() {  
+                alert('Dr. Epaminondas Alberto Santos é um médico patologista especialista em doença de Hodgkin. Ele gosta de pescar e passar tempo com sua esposa e filhos.');  
+            });  
+        }  
+    </script>  
+</body>
+
+</html>

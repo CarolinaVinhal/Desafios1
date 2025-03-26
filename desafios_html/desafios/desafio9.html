@@ -1,0 +1,98 @@
+<!DOCTYPE html>  
+<html lang="pt-BR">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <title>Podcast - profundamente</title>  
+   
+    <style>  
+        body {  
+            font-family: monospace;  
+            margin: 0;  
+            padding: 20px;  
+            background-color: aliceblue;  
+        }  
+        header {  
+            text-align: center;  
+            margin-bottom: 20px;  
+        }  
+        audio {  
+            width: 100%;   
+            max-width: 500px;   
+            margin: 0 auto;  
+            display: block;  
+        }  
+        table {  
+            width: 100%;  
+            border-collapse: collapse;  
+            margin-top: 20px;  
+        }  
+        th, td {  
+            text-align: left;  
+        }  
+        .info-button {  
+            display: block;  
+            margin: 20px auto;  
+            padding: 10px 20px;  
+            font-size: 1rem;  
+            background-color: silver;  
+            color: white;  
+            border: none;  
+            border-radius: 5px;  
+            cursor: pointer;  
+        }  
+        .info-button:hover {  
+            background-color: lightblue;  
+        }  
+    </style>  
+</head>  
+<body>  
+    <header>  
+        <h1>Podcast profunda.mente - Luiza Amelia Vinhal</h1>  
+    </header>  
+
+    <section>  
+        <h2>Episódio Mais Recente</h2>  
+        <iframe class="spotify-player" src="https://open.spotify.com/embed/episode/189KD143YoH7h4vzMgwywD" width="100%" height="100" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>  
+        <p>Converso com a Marcela, uma psicóloga que trabalha com (e vive) a visão integral do ser humano. Conversamos sobre temas que vêm sendo transformadores para a minha jornada: crises, mente inconsciente, padrões de repetição, padrões transgeracionais e muito mais. Esse episódio....</p>  
+
+        <button class="info-button" onclick="showInfo()">Clique para saber mais</button>  
+        <p id="info-message" style="display: none; margin-top: 10px; color: #333;"></p> <!-- Mensagem de info oculta inicialmente -->  
+    </section>  
+
+    <table>  
+        <thead>  
+            <tr>  
+                <th>Título</th>  
+                <th>Data</th>  
+                <th>Duração</th>  
+            </tr>  
+        </thead>  
+        <tbody>  
+            <tr>  
+                <td>Episódio 1 </td>  
+                <td>01 de Janeiro de 2025</td>  
+                <td>30:00</td>  
+            </tr>  
+            <tr>  
+                <td>Episódio 2 </td>  
+                <td>15 de Janeiro de 2025</td>  
+                <td>45:12</td>  
+            </tr>  
+            <tr>  
+                <td>Episódio 3 </td>  
+                <td>01 de Fevereiro de 2025</td>  
+                <td>52:47</td>  
+            </tr>  
+        </tbody>  
+    </table>  
+
+    <script>  
+        function showInfo() {  
+            const infoMessage = document.getElementById("info-message");  
+            infoMessage.textContent = "Obrigado por ouvir nosso podcast! Estamos sempre em busca de novas formas de inspirar você. Fique atento aos nossos episódios futuros!";  
+            infoMessage.style.display = "block"; 
+        }  
+    </script>  
+</body>  
+</html>  

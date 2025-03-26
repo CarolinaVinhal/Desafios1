@@ -1,0 +1,121 @@
+<!DOCTYPE html>  
+<html lang="pt-BR">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <title>Galeria de Imagens</title>  
+
+    <style>  
+        body {  
+            font-family: monospace;  
+            margin: 0;  
+            padding: 20px;  
+            background-color: aliceblue;   
+        }  
+        header {  
+            text-align: center;  
+            margin-bottom: 20px;  
+        }  
+        .gallery {  
+            display: flex;  
+            justify-content: center;   
+            gap: 15px;   
+            flex-wrap: wrap; 
+        }  
+        img {  
+            width: 250px; 
+            height: 250px; 
+            object-fit: cover; 
+        }  
+        .title{
+            text-align: center; 
+            transition: font-size 0.3s; 
+            font-size: 3em;  
+        }
+        .title.enlarged{
+            font-size: 3.5em;
+            font-weight: bold;  
+        }
+        .image-title {  
+            text-align: center; 
+            transition: font-size 0.3s; 
+            font-size: 1em; 
+        }  
+        .image-title.enlarged {  
+            font-size: 1.5em;
+            font-weight: bold;   
+        }  
+        table {  
+            width: 100%;   
+            border-collapse: collapse;   
+            margin-top: 20px;  
+        }  
+        th, td {  
+            border: 1px solid #ddd;   
+            padding: 12px;   
+            text-align: left;   
+        }  
+        th {  
+            background-color: #007BFF;   
+            color: white;   
+        }  
+    </style>  
+</head>  
+<body>  
+    <header>  
+        <h1 class="title"onmouseover="enlargeText(this)" onmouseout="resetText(this)">Galeria de Imagens</h1>  
+    </header>  
+
+    <section class="gallery">  
+        <div>  
+            <img src="https://cdn.pixabay.com/photo/2022/08/10/18/57/lake-7377942_1280.jpg" alt="Imagem 1" />   
+            <p class="image-title" onmouseover="enlargeText(this)" onmouseout="resetText(this)">Imagem 1</p>  
+        </div>  
+        <div>  
+            <img src="https://cdn.pixabay.com/photo/2021/02/06/22/43/lago-peru-5989650_1280.jpg" alt="Imagem 2" />   
+            <p class="image-title" onmouseover="enlargeText(this)" onmouseout="resetText(this)">Imagem 2</p>  
+        </div>  
+        <div>  
+            <img src="https://cdn.pixabay.com/photo/2021/05/29/03/00/beach-6292382_1280.jpg" alt="Imagem 3" />  
+            <p class="image-title" onmouseover="enlargeText(this)" onmouseout="resetText(this)">Imagem 3</p>  
+        </div>  
+    </section>  
+
+    <table>  
+        <thead>  
+            <tr>  
+                <th>Nome</th>  
+                <th>Descrição</th>  
+                <th>Data</th>  
+            </tr>  
+        </thead>  
+        <tbody>  
+            <tr>  
+                <td>Imagem 1</td>  
+                <td>Uma bela paisagem ao pôr do sol.</td>  
+                <td>12 de Março de 2025</td>  
+            </tr>  
+            <tr>  
+                <td>Imagem 2</td>  
+                <td>Uma vista deslumbrante da montanha feita por drones.</td>  
+                <td>15 de Março de 2025</td>  
+            </tr>  
+            <tr>  
+                <td>Imagem 3</td>  
+                <td>Uma tranquila praia de areia branca.</td>  
+                <td>20 de Março de 2025</td>  
+            </tr>  
+        </tbody>  
+    </table>  
+
+    <script>  
+        function enlargeText(element) {  
+            element.classList.add('enlarged');
+        }  
+      
+        function resetText(element) {  
+            element.classList.remove('enlarged'); 
+        }  
+    </script>  
+</body>  
+</html>  

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">  
+<head>  
+    <meta charset="UTF-8">  
+    <title> Contato </title>
+
+    <style>
+        body {background-color: aquamarine;
+        font-family: Verdana;
+        text-align: center;
+        }
+    </style>
+    <script>  
+
+        function confirmSubmission(event) {  
+            event.preventDefault();  
+
+            const nome = document.getElementById('fname').value;  
+            const sobrenome = document.getElementById('lname').value;  
+            const cep = document.getElementById('CEP').value;  
+            const endereco = document.getElementById('end').value;  
+            const telefone = document.getElementById('tel').value;  
+            const mensagem = document.getElementById('mensagem').value;  
+
+    
+            const confirma = `Você está prestes a enviar as seguintes informações:\n  
+            Nome: ${nome}\n  
+            Sobrenome: ${sobrenome}\n  
+            CEP: ${cep}\n  
+            Endereço: ${endereco}\n  
+            Telefone: ${telefone}\n  
+            Mensagem: ${mensagem}`;  
+            
+ 
+            if (confirm(confirma)) {  
+                document.querySelector('form').submit(); 
+            }  
+        }  
+    </script>  
+</head>
+
+<body>
+<h1>Contato</h1>
+<form onsubmit="confirmSubmission(event)"> 
+        <label for="fname">Nome:</label><br>
+        <input type="text" id="fname" name="fname" required><br>
+        <label for="lname">Sobrenome:</label><br>
+        <input type="text" id="lname" name="lname" required><br>
+        <label for="CEP">CEP:</label><br>
+        <input type="text" id="CEP" name="CEP" required><br>
+        <label for="end">Endereço:</label><br>
+        <input type="text" id="end" name="end" required><br>
+        <label for="tel">Telefone:</label><br>
+        <input type="tel" id="tel" name="tel" required><br><br>
+        <label for="mes">Mensagem:</label><br>
+        <textarea id="mensagem" name="mensagem" required></textarea><br><br>
+        <input type="submit" value="Submit">
+      </form>
+
+</body>
+
+</html>

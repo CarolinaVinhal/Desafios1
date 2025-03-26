@@ -1,0 +1,121 @@
+<!DOCTYPE html>  
+<html lang="pt-BR">  
+<head>  
+    <meta charset="UTF-8">  
+   
+    <title>Portfólio</title>  
+    <style>  
+        * {  
+            box-sizing: border-box;  
+        }  
+
+        body {  
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;  
+        }  
+
+        header {  
+            background-color: lightcoral;  
+            padding: 30px;  
+            text-align: center;  
+            font-size: 35px;  
+            color: white;  
+        }  
+
+        
+        section {  
+            display: flex;  
+        }  
+
+    
+        nav {  
+            flex: 1;  
+            background: lightcyan;  
+            padding: 20px;  
+        }  
+
+        nav ul {  
+            list-style-type: none;  
+            padding: 0;  
+        }  
+
+        article {  
+            flex: 3;  
+            background-color: lightcyan;  
+            padding: 10px;  
+        }  
+
+       
+        footer {  
+            background-color: lightcyan;  
+            padding: 10px;  
+            text-align: center;  
+            color: lightcoral;  
+        }  
+
+        .large {  
+            transform: scale(1.5); /* Aumenta o tamanho da imagem */  
+            transition: transform 0.3s ease; /* Transição suave */  
+        }  
+        
+        img {  
+            max-width: 100%;   
+            cursor: pointer;   
+        }  
+
+        @media (max-width: 600px) {  
+            section {  
+                flex-direction: column;  
+            }  
+        }  
+    </style>  
+</head>  
+<body>  
+
+<header>  
+    <h2>Portfólio</h2>  
+</header>  
+
+<section>  
+    <nav>  
+        <ul>  
+            <li><a href="#C1">Projeto 1</a></li>  
+            <li><a href="#C2">Projeto 2</a></li>  
+            <li><a href="#C3">Projeto 3</a></li>  
+            <li><a href="#C4">Contatos</a></li>  
+        </ul>  
+    </nav>  
+
+    <article>  
+        <h1 id="C1">Projeto 1 </h1>  
+        <img src="https://cdn.pixabay.com/photo/2022/05/16/11/25/sunset-7200125_1280.jpg" alt="" width="250" height="250" onclick="toggleSize(this)">  
+        <p>Aqui apresentamos uma casa muito bonita, feita por um arquiteto X.</p>  
+        <p>Com seu design inovador e excelentes condições de acessibilidade, é uma moradia ideal para todos os grupos.</p>  
+        <hr>  
+        
+        <h1 id="C2">Projeto 2</h1>  
+        <img src="https://cdn.pixabay.com/photo/2015/11/06/11/48/multi-family-home-1026486_1280.jpg" alt="" width="250" height="250" onclick="toggleSize(this)">  
+        <p>Apresento um apartamento muito bonito, feito inteiramente com materiais renováveis.</p>  
+        <p>Além de boa para o meio ambiente, é ideal para todos.</p>  
+        <hr>  
+        
+        <h1 id="C3">Projeto 3</h1>  
+        <img src="https://cdn.pixabay.com/photo/2015/09/22/19/00/ship-952292_1280.jpg" alt="" width="250" height="250" onclick="toggleSize(this)">  
+        <p>Aqui apresentamos um barco moderno e a vela, para uma vida de memorias intensas e sofisticadas.</p>  
+        <p>Com seu design simples e unico, é uma moradia ideal para quem gosta de mar.</p>  
+        <hr>  
+    </article>  
+</section>  
+
+<footer>  
+    <h3 id="C4">Contatos:</h3>  
+    <p>arquitetoX@email.com</p>  
+</footer>  
+
+<script>  
+    function toggleSize(img) {  
+        img.classList.toggle("large");   
+    }  
+</script>  
+
+</body>  
+</html>  
